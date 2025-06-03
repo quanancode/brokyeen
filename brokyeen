@@ -10,6 +10,12 @@ local Tab = Window:MakeTab({
 Tab:AddButton({
 	Name = "Enter arena",
 	Callback = function()game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-1010, 328, 5))
+OrionLib:MakeNotification({
+	Name = "The Battle Begins!",
+	Content = "have fun xd",
+	Image = "rbxassetid://4483345998",
+	Time = 5
+})
       		print("entering arena")
   	end    
 })
@@ -28,24 +34,48 @@ Tab:AddButton({
 Tab:AddButton({
 	Name = "Cannon!",
 	Callback = function()game.Players.LocalPlayer.Character:MoveTo(Vector3.new(256, 58, 235))
+OrionLib:MakeNotification({
+	Name = "Teleported to Cannon",
+	Content = "Only works when in arena",
+	Image = "rbxassetid://4483345998",
+	Time = 8
+})
       		print("teleported to castle")
-  	end    
+     end    
 })
 Tab:AddButton({
 	Name = "Slapple",
 	Callback = function()game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-373, 51, -11))
+OrionLib:MakeNotification({
+	Name = "Teleported to Slapple",
+	Content = "Only works when in arena",
+	Image = "rbxassetid://4483345998",
+	Time = 4
+})
       		print("teleported to slapple!")
   	end    
 })
 Tab:AddButton({
 	Name = "Tourney",
 	Callback = function()game.Players.LocalPlayer.Character:MoveTo(Vector3.new(3423, 239, -8))
+OrionLib:MakeNotification({
+	Name = "KILLEMALL!1!",
+	Content = "tabbing is bad dont do it",
+	Image = "rbxassetid://4483345998",
+	Time = 3
+})
       		print("KILLEM!!1!")
   	end    
 })
 Tab:AddButton({
 	Name = "Chain island",
 	Callback = function()game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-213, 32, 1))
+OrionLib:MakeNotification({
+	Name = "Teleported to ¿",
+	Content = "wat is the name of this island lol",
+	Image = "rbxassetid://4483345998",
+	Time = 4
+})
       		print("teleported to dunno")
   	end    
 })
@@ -71,6 +101,12 @@ Tab:AddButton({
 	Name = "🗿",
 	Callback = function()game.Players.LocalPlayer.Character:MoveTo(Vector3.new(223, 20, 5))
       		print("🗿")
+  	end    
+})
+Tab:AddButton({
+	Name = "Lobby(end)",
+	Callback = function()game.Players.LocalPlayer.Character:MoveTo(Vector3.new(37, 322, -14))
+      		print("teleported to the end of lobby")
   	end    
 })
 OrionLib:Init()
