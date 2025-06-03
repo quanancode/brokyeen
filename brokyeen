@@ -133,14 +133,84 @@ local Tab = Window:MakeTab({
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
 })
-
-
-
+Tab:AddParagraph("ABILITIES INFO","You have to own the glove (and equip it manually yet) for the abilities work")
+Tab:AddButton({
+	Name = "Swapper",
+	Callback = function()game:GetService("ReplicatedStorage"):WaitForChild("SLOC"):FireServer()
+OrionLib:MakeNotification({
+	Name = "Swapper - Cooldown",
+	Content = "Ability in cooldown, dont use it again or you will be kicked!",
+	Image = "rbxassetid://4483345998",
+	Time = 5.5
+})
+      		print("swapped")
+  	end    
+})
+Tab:AddButton({
+	Name = "Ghost",
+	Callback = function()game:GetService("ReplicatedStorage"):WaitForChild("Ghostinvisibilityactivated"):FireServer()
+OrionLib:MakeNotification({
+	Name = "Ghost - Cooldown",
+	Content = "Ability in cooldown, dont use it again or you will be kicked!",
+	Image = "rbxassetid://4483345998",
+	Time = 0.25
+})
+      		print("ghosted")
+  	end    
+})
+Tab:AddButton({
+	Name = "Brick",
+	Callback = function()game:GetService("ReplicatedStorage"):WaitForChild("lbrick"):FireServer()
+OrionLib:MakeNotification({
+	Name = "Brick - Cooldown",
+	Content = "Ability in cooldown, dont use it again or you will be kicked!",
+	Image = "rbxassetid://4483345998",
+	Time = 1.350
+})
+      		print("bricked")
+  	end    
+})
+local Tab = Window:MakeTab({
+	Name = "Attack",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+Tab:AddParagraph("Supported gloves","Default and Extended")
+Tab:AddButton({
+	Name = "Slap (read above)",
+	Callback = function()            local Players = game:GetService("Players")
+            local ReplicatedStorage = game:GetService("ReplicatedStorage")
+            
+            for _, player in pairs(Players:GetPlayers()) do
+                if player.Character and player.Character:FindFirstChild("HumanoidRootPart") then
+                    local args = { [1] = player.Character.HumanoidRootPart }
+                    ReplicatedStorage:WaitForChild("b"):FireServer(unpack(args))
+                end
+            end
+      		print("slapped")
+  	end    
+})
+Tab:AddParagraph("Supported gloves","Dual, Glovel,several others(TBA)")
+Tab:AddButton({
+	Name = "Slap (read above)",
+	Callback = function()            local Players = game:GetService("Players")
+            local ReplicatedStorage = game:GetService("ReplicatedStorage")
+            
+            for _, player in pairs(Players:GetPlayers()) do
+                if player.Character and player.Character:FindFirstChild("HumanoidRootPart") then
+                    local args = { [1] = player.Character.HumanoidRootPart }
+                    ReplicatedStorage:WaitForChild("GeneralHit"):FireServer(unpack(args))
+                end
+            end
+      		print("Slapped")
+  	end    
+})
 local Tab = Window:MakeTab({
 	Name = "changelogs",
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
 })
+Tab:AddParagraph("Changelogs v0.2","Added Abilities tab (<20% done) - added Attacker tab (<10% done)")
 Tab:AddParagraph("Changelogs v0.015","Fixed the teleport names - added Changelogs and future updates tab - added default only teleport")
 Tab:AddParagraph("Changelogs v0.01","Added notifications for Entering arena - Chain island - Slapple island - Cannon island - Tourney")
 
@@ -149,6 +219,6 @@ local Tab = Window:MakeTab({
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
 })
-Tab:AddParagraph("¡TO BE ADDED!","Next update(i hope): abilities tab")
+Tab:AddParagraph("¡TO BE ADDED!","Next update(i hope): 50% abilities tab")
 Tab:AddParagraph("!TO BE ADDED!","After abilities update: auto equip and use abilities")
 OrionLib:Init()
