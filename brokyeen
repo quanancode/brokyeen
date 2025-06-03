@@ -205,11 +205,55 @@ Tab:AddButton({
       		print("Slapped")
   	end    
 })
+Tab:AddParagraph("Supported gloves","Bull")
+Tab:AddButton({
+	Name = "Slap (read above)",
+	Callback = function()local Players = game:GetService("Players")
+            local ReplicatedStorage = game:GetService("ReplicatedStorage")
+            
+            for _, player in pairs(Players:GetPlayers()) do
+                if player.Character and player.Character:FindFirstChild("HumanoidRootPart") then
+                    local args = { [1] = player.Character.HumanoidRootPart }
+                    ReplicatedStorage:WaitForChild("GeneralHit"):FireServer(unpack(args))
+                end
+            end
+      		print("button pressed")
+  	end    
+})
+local Tab = Window:MakeTab({
+	Name = "Settings",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+Tab:AddParagraph("NOT WORKING YET","Please wait")
+Tab:AddToggle({
+	Name = "Auto join arena",
+	Default = false,
+	Callback = function(Value)
+		print(Value)
+	end    
+})
+Tab:AddToggle({
+	Name = "Slap aura",
+	Default = false,
+	Callback = function(Value)
+		print(Value)
+	end    
+})
+Tab:AddToggle({
+	Name = "Auto equip arena",
+	Default = false,
+	Callback = function(Value)
+		print(Value)
+	end    
+})
+
 local Tab = Window:MakeTab({
 	Name = "changelogs",
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
 })
+Tab:AddParagraph("Changelogs v0.21","Added Bull option on Attack - Added Settings tab (only model")
 Tab:AddParagraph("Changelogs v0.2","Added Abilities tab (<20% done) - added Attacker tab (<10% done)")
 Tab:AddParagraph("Changelogs v0.015","Fixed the teleport names - added Changelogs and future updates tab - added default only teleport")
 Tab:AddParagraph("Changelogs v0.01","Added notifications for Entering arena - Chain island - Slapple island - Cannon island - Tourney")
