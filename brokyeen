@@ -1,0 +1,76 @@
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/jensonhirst/Orion/main/source')))()
+
+local Window = OrionLib:MakeWindow({Name = "brokenhub(WIP)", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
+local Tab = Window:MakeTab({
+	Name = "teleports",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+Tab:AddButton({
+	Name = "Enter arena",
+	Callback = function()game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-1010, 328, 5))
+      		print("entering arena")
+  	end    
+})
+Tab:AddButton({
+	Name = "Lobby",
+	Callback = function()game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-988, 327, -2))
+      		print("teleported to lobby!")
+  	end    
+})
+Tab:AddButton({
+	Name = "Arena",
+	Callback = function()game.Players.LocalPlayer.Character:MoveTo(Vector3.new(0, 0, 0))
+      		print("teleported to arena!")
+  	end    
+})
+Tab:AddButton({
+	Name = "Cannon!",
+	Callback = function()game.Players.LocalPlayer.Character:MoveTo(Vector3.new(256, 58, 235))
+      		print("teleported to castle")
+  	end    
+})
+Tab:AddButton({
+	Name = "Slapple",
+	Callback = function()game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-373, 51, -11))
+      		print("teleported to slapple!")
+  	end    
+})
+Tab:AddButton({
+	Name = "Tourney",
+	Callback = function()game.Players.LocalPlayer.Character:MoveTo(Vector3.new(3423, 239, -8))
+      		print("KILLEM!!1!")
+  	end    
+})
+Tab:AddButton({
+	Name = "Chain island",
+	Callback = function()game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-213, 32, 1))
+      		print("teleported to dunno")
+  	end    
+})
+Tab:AddButton({
+	Name = "RainbowDash",
+	Callback = function()game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-121, -1, 117))
+      		print("teleported to Rainbow Dash")
+  	end    
+})
+Tab:AddButton({
+	Name = "LeftIsland",
+	Callback = function()game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-2, 28, 213))
+      		print("teleported to left island")
+  	end    
+})
+Tab:AddButton({
+	Name = "Rightisland",
+	Callback = function()game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-6, 32, -208))
+      		print("teleported to right island")
+  	end    
+})
+Tab:AddButton({
+	Name = "🗿",
+	Callback = function()game.Players.LocalPlayer.Character:MoveTo(Vector3.new(223, 20, 5))
+      		print("🗿")
+  	end    
+})
+OrionLib:Init()
