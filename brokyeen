@@ -260,6 +260,13 @@ local Tab = Window:MakeTab({
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
 })
+Tab:AddParagraph("Equip gloves section","Dont use these when joined arena throught the portal or will be kicked!")
+Tab:AddButton({
+	Name = "Default",
+	Callback = function()fireclickdetector(game.Workspace.Lobby["Default"].ClickDetector)
+      		print("Equipped default")
+  	end    
+})
 
 local Tab = Window:MakeTab({
 	Name = "changelogs",
