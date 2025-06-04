@@ -214,7 +214,7 @@ Tab:AddButton({
       		print("slapped")
   	end    
 })
-Tab:AddParagraph("Supported gloves","Dual, Glovel,several others(TBA)")
+Tab:AddParagraph("Supported gloves","Dual, Glovel, several others(TBA)")
 Tab:AddButton({
 	Name = "Slap (read above)",
 	Callback = function()            local Players = game:GetService("Players")
