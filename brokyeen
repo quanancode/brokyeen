@@ -170,6 +170,30 @@ OrionLib:MakeNotification({
       		print("bricked")
   	end    
 })
+Tab:AddButton({
+	Name = "Za Hando",
+	Callback = function()game:GetService("ReplicatedStorage"):WaitForChild("Erase"):FireServer()
+OrionLib:MakeNotification({
+	Name = "Za Hando - Cooldown",
+	Content = "Ability in cooldown, dont use it again or you will be kicked!",
+	Image = "rbxassetid://4483345998",
+	Time = 5.5
+})
+      		print("ZAHANDO!")
+  	end    
+})
+Tab:AddButton({
+	Name = "Pusher",
+	Callback = function()game:GetService("ReplicatedStorage"):WaitForChild("PusherWall"):FireServer()
+OrionLib:MakeNotification({
+	Name = "Pusher - Cooldown",
+	Content = "Ability in cooldown, dont use it again or you will be kicked!",
+	Image = "rbxassetid://4483345998",
+	Time = 5.5
+})
+      		print("BSODA used")
+  	end    
+})
 local Tab = Window:MakeTab({
 	Name = "Attack",
 	Icon = "rbxassetid://4483345998",
@@ -290,7 +314,8 @@ local Tab = Window:MakeTab({
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
 })
-Tab:AddParagraph("Changelogs v0.21","Added Bull option on Attack - Added Settings tab (only model")
+Tab:AddParagraph("Changelogs v0.25","Added Equip glove section (On Misc) - Added Pusher, Za Hando and Stun abilities tab")
+Tab:AddParagraph("Changelogs v0.21","Added Bull option on Attack - Added Settings tab (only model)")
 Tab:AddParagraph("Changelogs v0.2","Added Abilities tab (<20% done) - added Attacker tab (<10% done)")
 Tab:AddParagraph("Changelogs v0.015","Fixed the teleport names - added Changelogs and future updates tab - added default only teleport")
 Tab:AddParagraph("Changelogs v0.01","Added notifications for Entering arena - Chain island - Slapple island - Cannon island - Tourney")
