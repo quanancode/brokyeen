@@ -244,7 +244,21 @@ Tab:AddButton({
       		print("slapped")
   	end    
 })
-
+Tab:AddParagraph("Supported gloves","Snow")
+Tab:AddButton({
+	Name = "Slap (read above)",
+	Callback = function()local Players = game:GetService("Players")
+            local ReplicatedStorage = game:GetService("ReplicatedStorage")
+            
+            for _, player in pairs(Players:GetPlayers()) do
+                if player.Character and player.Character:FindFirstChild("HumanoidRootPart") then
+                    local args = { [1] = player.Character.HumanoidRootPart }
+                    ReplicatedStorage:WaitForChild("SnowHit"):FireServer(unpack(args))
+                end
+            end
+      		print("slapped")
+  	end    
+})
 local Tab = Window:MakeTab({
 	Name = "Doombringer",
 	Icon = "rbxassetid://4483345998",
@@ -314,7 +328,7 @@ local Tab = Window:MakeTab({
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
 })
-Tab:AddParagraph("Changelogs v0.25","Added Equip glove section (On Misc) - Added Pusher, Za Hando and Stun abilities tab")
+Tab:AddParagraph("Changelogs v0.25","Added Equip glove section (On Misc) - Added Pusher, Za Hando in abilities - Added Snow on attack")
 Tab:AddParagraph("Changelogs v0.21","Added Bull option on Attack - Added Settings tab (only model)")
 Tab:AddParagraph("Changelogs v0.2","Added Abilities tab (<20% done) - added Attacker tab (<10% done)")
 Tab:AddParagraph("Changelogs v0.015","Fixed the teleport names - added Changelogs and future updates tab - added default only teleport")
