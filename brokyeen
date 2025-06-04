@@ -324,7 +324,7 @@ Tab:AddButton({
   	end    
 })
 Tab:AddButton({
-	Name = "Pusher",
+	Name = "Za Hando",
 	Callback = function()fireclickdetector(game.Workspace.Lobby["Za Hando"].ClickDetector)
       		print("Equipped za hando")
   	end    
