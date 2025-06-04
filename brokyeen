@@ -217,7 +217,7 @@ Tab:AddButton({
                     ReplicatedStorage:WaitForChild("GeneralHit"):FireServer(unpack(args))
                 end
             end
-      		print("button pressed")
+      		print("slapped")
   	end    
 })
 
@@ -267,7 +267,24 @@ Tab:AddButton({
       		print("Equipped default")
   	end    
 })
-
+Tab:AddButton({
+	Name = "Dual",
+	Callback = function()fireclickdetector(game.Workspace.Lobby["Dual"].ClickDetector)
+      		print("Equipped dual")
+  	end    
+})
+Tab:AddButton({
+	Name = "Bull",
+	Callback = function()fireclickdetector(game.Workspace.Lobby["Bull"].ClickDetector)
+      		print("Equipped bull")
+  	end    
+})
+Tab:AddButton({
+	Name = "Glovel",
+	Callback = function()fireclickdetector(game.Workspace.Lobby["Glovel"].ClickDetector)
+      		print("Equipped glovel!")
+  	end    
+})
 local Tab = Window:MakeTab({
 	Name = "changelogs",
 	Icon = "rbxassetid://4483345998",
