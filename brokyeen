@@ -312,9 +312,27 @@ Tab:AddButton({
   	end    
 })
 Tab:AddButton({
+	Name = "Snow",
+	Callback = function()fireclickdetector(game.Workspace.Lobby["Snow"].ClickDetector)
+      		print("Equipped snow")
+  	end    
+})
+Tab:AddButton({
 	Name = "Bull",
 	Callback = function()fireclickdetector(game.Workspace.Lobby["Bull"].ClickDetector)
       		print("Equipped bull")
+  	end    
+})
+Tab:AddButton({
+	Name = "Pusher",
+	Callback = function()fireclickdetector(game.Workspace.Lobby["Za Hando"].ClickDetector)
+      		print("Equipped za hando")
+  	end    
+})
+Tab:AddButton({
+	Name = "Pusher",
+	Callback = function()fireclickdetector(game.Workspace.Lobby["Pusher"].ClickDetector)
+      		print("Equipped BSODA")
   	end    
 })
 Tab:AddButton({
