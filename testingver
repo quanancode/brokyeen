@@ -1,1 +1,28 @@
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/jensonhirst/Orion/main/source')))()
+local Window = OrionLib:MakeWindow({Name = "testing purposes", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
 
+local Tab = Window:MakeTab({
+	Name = "Toogle",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+Tab:AddToggle({
+	Name = "slap aura",
+	Default = false,
+	Callback = function(Value)if true then
+            local Players = game:GetService("Players")
+            local ReplicatedStorage = game:GetService("ReplicatedStorage")
+            
+            for _, player in pairs(Players:GetPlayers()) do
+                if player.Character and player.Character:FindFirstChild("HumanoidRootPart") then
+                    local args = { [1] = player.Character.HumanoidRootPart }
+                    ReplicatedStorage:WaitForChild("b"):FireServer(unpack(args))
+                end
+            end
+wait(0.75)
+end
+		print(Value)
+	end    
+})
+
+OrionLib:Init()
