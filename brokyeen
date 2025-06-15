@@ -1,9 +1,9 @@
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/jensonhirst/Orion/main/source')))()
 
-local Window = OrionLib:MakeWindow({Name = "brokenhub(WIP)", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
+local Window = OrionLib:MakeWindow({Name = "Unboundless - Slap Battles", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
 OrionLib:MakeNotification({
 	Name = "!this hub stills on alpha!",
-	Content = "made by quana :D",
+	Content = "made by quana, have fun :D",
 	Image = "rbxassetid://4483345998",
 	Time = 5
 })
